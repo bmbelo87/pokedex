@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div id="container">
+        <span class="pokeLast">
+          <a href="#"> 
+          <img
+          src="images/frame.svg"
+          alt="Pokémon Anterior" id="last" />
+          </a>
+        </span>
+        <span class="pokeNext">
+        <a href="#"> 
+          <img
+          src="images/frame.svg"
+          alt="Próximo Pokémon" id="next"/>
+       </a>
+      </span> 
+        <div class="title">
+          <ul>
+            <li class="return">
+              <img src="images/arrow.svg" alt="Seta para voltar" />
+            </li>
+            <li id="pname">Bulbasaur</li>
+            <li id="pnumber">#000</li>
+          </ul>
+        </div>
+
+        <div class="pokemonAvatar">
+          <span>
+            <img
+              src="images/Pokeball.svg"
+              id="pokeballColor"
+              alt="Pokeball Cores"
+            />
+          </span>
+          <img id="pokePhoto" src="images/001.svg" alt="Photo Pokemon" />
+
+        </div>
+        <div class="infos">
+          <div class="about">
+            <ul id="types">
+              <li id="type1" class="pokeType">Type</li>
+              <li id="type2" class="pokeType">Type</li>
+            </ul>
+
+            <h2 id="about">About</h2>
+
+            <ul class="identityPoke">
+              <li class="weightPoke">
+                <img src="images/FrameWeight.svg" alt="Peso pokémon" />
+                <span id="weightPoke">6,9 kg</span>
+              </li>
+              <li class="bar">&nbsp;</li>
+              <li class="heightPoke">
+                <img src="images/FrameHeight.svg" alt="Altura pokémon" />
+                <span id="heightPoke">0,7 m</span>
+              </li>
+              <li class="bar">&nbsp;</li>
+              <li id="movesPoke">
+                <p>
+                  <span id="ability1">Ability 1<br /></span> 
+                  <span id="ability2">Ability 2 <br/></span> 
+                  <span id="ability3">Ability 3</span>
+                </p>
+              </li>
+            </ul>
+            <ul class="identityPokeTitles">
+              <li>Weight</li>
+              <li>Height</li>
+              <li>Abilities</li>
+            </ul>
+            <p id="textAboutPoke">
+              There is a plant seed on its back right from the day this Pokémon
+              is born. The seed slowly grows larger.
+            </p>
+            <div>
+            <h2 id="baseStats">Base Stats</h2>
+            </div>
+            <div class="baseStatsPoke">
+              <ul id="statsPokes">
+              <li class="statsTitle">
+                <h4>HP</h4>
+              </li>
+              <li class="statsTitle">
+                <h4>ATK</h4>
+              </li>
+              <li class="statsTitle">
+                <h4>DEF</h4>
+              </li>
+              <li class="statsTitle">
+                <h4>SATK</h4>
+              </li>
+              <li class="statsTitle">
+                <h4>SDEF</h4>
+              </li>
+              <li class="statsTitle">
+                <h4>SPD</h4>
+              </li>
+            </ul>
+            <ul>
+              <li class="bar">&nbsp;</li>
+            </ul>
+            <ul>
+              <li class="statsNumber" id="hp">045</li>
+              <li class="statsNumber" id="atk">049</li>
+              <li class="statsNumber" id="def">049</li>
+              <li class="statsNumber" id="satk">065</li>
+              <li class="statsNumber" id="sdef">065</li>
+              <li class="statsNumber" id="spd">045</li>
+            </ul>
+            <ul class="pokePercentBackground" id="teste" >
+              <li class="statsPercentBackground"></li>
+              <li class="statsPercentBackground"></li>
+              <li class="statsPercentBackground"></li>
+              <li class="statsPercentBackground"></li>
+              <li class="statsPercentBackground"></li>
+              <li class="statsPercentBackground"></li>
+            </ul>
+            <ul class="pokePercent" id="teste" > 
+              <li class="statsPercent" id="hpPercent"></li>
+              <li class="statsPercent" id="atkPercent"></li>
+              <li class="statsPercent" id="defPercent"></li>
+              <li class="statsPercent" id="satkPercent"></li>
+              <li class="statsPercent" id="sdefPercent"></li>
+              <li class="statsPercent" id="spdPercent"></li>
+            </ul>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,384 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  --white: hsl(0, 0%, 100%);
+  --darkgray: hsl(0, 0%, 13%);
+  --mediumgray: hsl(0, 0%, 40%);
+  --lightgray: hsl(0, 0%, 88%);
+  /*Type Colors*/
+  --normal: hsl(54, 20%, 58%);
+  --fighting: hsl(351, 70%, 45%);
+  --flying: hsl(255, 71%, 75%);
+  --ground: hsl(45, 64%, 65%);
+  --poison: hsl(304, 45%, 44%);
+  --rock: hsl(49, 58%, 45%);
+  --bug: hsl(66, 68%, 43%);
+  --ghost: hsl(263, 29%, 47%);
+  --steel: hsl(235, 21%, 77%);
+  --fire: hsl(23, 91%, 58%);
+  --water: hsl(219, 77%, 66%);
+  --grass: hsl(100, 56%, 54%);
+  --electric: hsl(47, 94%, 58%);
+  --psychic: hsl(343, 95%, 66%);
+  --ice: hsl(188, 52%, 74%);
+  --dragon: hsl(257, 100%, 61%);
+  --dark: hsl(16, 21%, 38%);
+  --fairy: hsl(348, 59%, 76%);
+
+  --color: var(--mediumgray);
+
+  --baseHP: 45;
+  --baseATK: 49;
+  --baseDEF: 49;
+  --baseSATK: 65;
+  --baseSDEF: 65;
+  --baseSPD: 45;
+
+  height: 100%;
+  font-family: 'Poppins';
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+#container {
+  background-color: var(--grass);
+  width: 360px;
+  height: 640px;
+  border-radius: 12px;
+  position: relative;
+}
+
+.title {
+  width: 312px;
+  height: 32px;
+  color: var(--white);
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  display: flex;
+  z-index: 2;
+}
+
+.title ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.title .return {
+  width: 24px;
+  height: 32px;
+}
+
+.title #pname {
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  width: 224px;
+  height: 32px;
+  line-height: 32px;
+}
+
+.title #pnumber {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 32px;
+  width: 32px;
+  height: 32px;
+}
+
+.pokeLast {
+  position: absolute;
+  left: 28px;
+  top: 192px;
+  z-index: 111;
+}
+
+.pokeNext {
+  position: absolute;
+  transform: scaleX(-1);
+  right: 28px;
+  top: 192px;
+  z-index: 111;
+}
+
+.pokemonAvatar {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: 80px;
+  left: 80px;
+  z-index: 1;
+}
+
+#pokePhoto {
+  width: 100%;
+  height: 100%;
+}
+
+.pokemonAvatar #pokeballColor {
+  position: absolute;
+  top: -72px;
+  right: -72px;
+  z-index: -1;
+  filter: invert(1);
+  opacity: 0.2;
+}
+
+#nextpoke #lastpoke > img {
+  display: none;
+}
+
+.infos {
+  position: absolute;
+  top: 224px;
+  left: 4px;
+  background: var(--white);
+  border-radius: 8px;
+  width: 352px;
+  height: 412px;
+  z-index: 0;
+}
+
+.about {
+  position: relative;
+  width: 312px;
+  height: 356px;
+  margin-top: 56px;
+  margin-left: 20px;
+}
+
+#types {
+  width: 312px;
+  height: 20px;
+  padding: 0;
+
+  list-style: none;
+
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+
+  font-size: 10px;
+  font-weight: bold;
+
+  color: var(--white);
+}
+
+#types li {
+  border-radius: 10px;
+  padding: 2px 8px;
+}
+
+.pokeType {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--mediumgray);
+}
+
+.about h2 {
+  width: 312px;
+  height: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  color: var(--grass);
+}
+
+.identityPoke {
+  width: 252px;
+  height: 48px;
+  list-style: none;
+  display: flex;
+  white-space: nowrap;
+  padding: 0;
+  position: relative;
+  left: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.identityPoke ul li {
+  display: flex;
+}
+
+.identityPoke .bar {
+  background: var(--lightgray);
+  width: 1px;
+  height: 55px;
+  margin: 0px 24px;
+}
+
+.identityPoke span p {
+  font-weight: 400;
+  font-style: normal;
+  color: var(--darkgray);
+  text-align: justify;
+}
+
+.identityPoke span {
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.identityPoke p {
+  font-size: 10px;
+  line-height: 16px;
+}
+
+.identityPokeTitles {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 70px;
+  font-size: 8px;
+  line-height: 12px;
+  font-weight: 400;
+  color: var(--mediumgray);
+  position: absolute;
+  top: 112px;
+}
+
+.weightPoke > img {
+  vertical-align: middle;
+}
+
+.heightPoke > img {
+  vertical-align: middle;
+}
+
+#textAboutPoke {
+  margin-top: 16px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: justify;
+}
+
+.baseStatsPoke {
+  width: 312px;
+  height: 100px;
+  display: flex;
+}
+
+.statsTitle {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: right;
+}
+
+.baseStatsPoke ul {
+  list-style: none;
+  padding: 0px;
+}
+
+.baseStatsPoke .bar {
+  background: var(--lightgray);
+  width: 1px;
+  height: 100px;
+  list-style: none;
+  margin: 0px 12px;
+}
+
+.statsNumber {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--darkgray);
+  margin-right: 8px;
+}
+
+.pokePercent {
+  width: 231px;
+  height: 100px;
+  position: absolute;
+  right: 0px;
+}
+
+.pokePercentBackground {
+  width: 231px;
+  height: 100px;
+  position: absolute;
+  right: 0px;
+}
+
+.pokePercent .statsPercent {
+  margin: 4px 0px;
+  height: 4px;
+  opacity: 1;
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  max-width: 231px;
+}
+
+.pokePercentBackground .statsPercentBackground {
+  margin: 4px 0px;
+  height: 4px;
+  background: var(--color);
+  opacity: 0.2;
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+
+.statsPercent {
+  background: var(--color);
+}
+
+#hpPercent {
+  --widthA: 100%;
+  --widthB: calc(var(--widthA) / 255);
+  --widthC: calc(var(--widthB) * var(--baseHP));
+  width: var(--widthC);
+}
+
+#atkPercent {
+  --widthA: 100%;
+  --widthB: calc(var(--widthA) / 255);
+  --widthC: calc(var(--widthB) * var(--baseATK));
+  width: var(--widthC);
+}
+
+#defPercent {
+  --widthA: 100%;
+  --widthB: calc(var(--widthA) / 255);
+  --widthC: calc(var(--widthB) * var(--baseDEF));
+  width: var(--widthC);
+}
+
+#satkPercent {
+  --widthA: 100%;
+  --widthB: calc(var(--widthA) / 255);
+  --widthC: calc(var(--widthB) * var(--baseSATK));
+  width: var(--widthC);
+}
+
+#sdefPercent {
+  --widthA: 100%;
+  --widthB: calc(var(--widthA) / 255);
+  --widthC: calc(var(--widthB) * var(--baseSDEF));
+  width: var(--widthC);
+}
+
+#spdPercent {
+  --widthA: 100%;
+  --widthB: calc(var(--widthA) / 255);
+  --widthC: calc(var(--widthB) * var(--baseSPD));
+  width: var(--widthC);
+}
