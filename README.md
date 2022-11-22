@@ -7,3 +7,6 @@ Projeto criado para aprendizado de HTML5, CSS3, JS e como consumir APIs.
 - Projeto inicial, somente tela de exibição do pokémon;
 
 Não é necessário nenhuma informação especial para funcionar, apenas clonar e abrir no navegador.
+
+Link do Github Pages:
+https://bmbelo87.github.io/pokedex/
